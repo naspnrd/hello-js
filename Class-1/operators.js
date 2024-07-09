@@ -14,6 +14,12 @@
 // logical Operatos => &&, ||, !
 // short circuiting
 
+console.log(1 && 2); // 2
+console.log(0 && 1); // 0
+
+console.log(1 || 2); // 1
+console.log(0 || 1); // 1
+
 // Relational Operator => > <
 
 // Increment and decrement
@@ -32,7 +38,7 @@
 
 // Bitwise Operators => &, |, ^, ~, etc
 
-let a = 5; // Binary: 0101
-let b = 3; // Binary: 0011
-console.log(a & b); //0001
-console.log(a | b); //0111
+// let a = 5; // Binary: 0101
+// let b = 3; // Binary: 0011
+// console.log(a & b); //0001
+// console.log(a | b); //0111
