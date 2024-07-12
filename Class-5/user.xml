@@ -1,0 +1,16 @@
+<root>
+    <name>Neeraj</name>
+    <age>25</age>
+    <isStudent>false</isStudent>
+    <address>
+        <street>Mathura</street>
+        <state>UP</state>
+        <country>IN</country>
+    </address>
+    <hobbies>
+        <hoobby>teaching</hoobby>
+        <hoobby>games</hoobby>
+        <hoobby>biker/biking</hoobby>
+    </hobbies>
+    <hasPets>null</hasPets>
+</root>
