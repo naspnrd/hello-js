@@ -1,0 +1,27 @@
+/* #container .content {
+    color: red;
+} */
+
+/* #container > .content {
+    color: green;
+} */
+
+/* .title + .content {
+    font-weight: bold;
+    color: red;
+} */
+/* 
+.title ~ .content {
+    font-weight: bold;
+    color: green;
+} */
+
+.primary {
+    background-color: blue;
+    color: black;
+}
+
+.secondary {
+    background-color: white;
+    color: black;
+}
