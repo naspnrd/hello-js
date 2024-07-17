@@ -1,0 +1,25 @@
+.primary {
+    background-color: blue;
+    color: black;
+}
+
+.secondary {
+    background-color: white;
+    color: black;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+}
+
+div {
+    min-width: 50px;
+    min-height: 50px;
+    padding: 30px;
+    border: 1px solid black;
+}
