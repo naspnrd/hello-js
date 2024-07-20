@@ -10,8 +10,8 @@ body {
     display: grid;
     grid-template-columns: 40px auto;
     grid-template-rows: 30px auto;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     /* margin: 50px auto; */
     border: 1px solud #c0c0c0;
     overflow-x: scroll;
@@ -80,6 +80,7 @@ body {
     font-style: normal;
     overflow-y: scroll;
 }
+
 .options {
     background-color: #f8fbfd;
     height: 12vh;
@@ -101,7 +102,7 @@ body {
 
 .fr-aic {
     display: flex;
-    justify-content: center;
+    align-items: center;
     gap: 10px;
 }
 
