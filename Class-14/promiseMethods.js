@@ -79,15 +79,78 @@
 //   .finally(() => console.log(12));
 // console.log(13);
 
-new Promise((resolve, reject) => {
-  resolve(1);
-  resolve(2);
-  reject("error");
-}).then(
-  (value) => {
-    console.log(value);
-  },
-  (error) => {
-    console.log(error);
-  }
-);
+// new Promise((resolve, reject) => {
+//   resolve(1);
+//   resolve(2);
+//   reject("error");
+// })
+//   .then(
+//     (value) => {
+//       console.log(value);
+//     },
+//     (error) => {
+//       console.log(error);
+//     }
+//   )
+//   .catch((error) => console.log(error)); // .then(_, onRejected)
+// .then(onFillFilled, onRejected)
+// O/P
+// 1
+
+Promise.resolve(1)
+  .then((val) => {
+    console.log(val); // 1
+    return val + 1;
+  })
+  .then((val) => {
+    console.log(val); // 2
+  })
+  .then((val) => {
+    console.log(val); // undefined
+    return Promise.resolve(3).then((val) => {
+      console.log(val); // 3
+      // return val;
+      // returns nothing
+      // will return undefined
+    });
+  })
+  .then((val) => {
+    console.log(val); // undefined
+    return Promise.reject(4);
+  })
+  .catch((val) => {
+    console.log(val); // 4
+    // return 10;
+  })
+  .finally((val) => {
+    console.log(val); // undefined
+    // return 10;
+    throw new Error("error");
+  })
+  .then((val) => {
+    console.log(val); // undefined
+  })
+  .catch((err) => console.log("catch--", err.message));
+
+// Promise.reject(1)
+//   .finally(() => {
+//     throw new Error(2);
+//   })
+//   .then((val) => console.log(val))
+//   .catch((err) => console.log(err));
+// // or
+// Promise.reject(1).finally(() => {
+//   return Promise.reject(2);
+// });
+
+// Promise.reject(1)
+//   .catch((val) => {
+//     console.log(val); // 1: rejected value is 1
+//     // returns nothing
+//     // will return undefined for promise object
+//   })
+//   .then((val) => {
+//     console.log(val); // undefined
+//     // returns nothing
+//     // will return undefined for promise object
+//   });
