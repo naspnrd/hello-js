@@ -116,3 +116,9 @@ function x() {
 }
 
 x();
+
+setTimeout(function abc() {
+  console.log("Hi");
+}, 2000);
+
+abc();
